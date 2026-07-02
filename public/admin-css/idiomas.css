@@ -1,0 +1,100 @@
+/* Idiomas page custom styles (moved from public/admin/css) */
+.table td,
+.table th {
+  vertical-align: middle;
+  text-align: center;
+}
+
+.table th.text-start,
+.table td.text-start {
+  text-align: left !important;
+}
+
+/* Actions area */
+.idiomas-actions {
+  gap: .5rem;
+}
+
+.idiomas-actions .form-control {
+  height: 32px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+.idiomas-actions .btn {
+  height: 32px;
+  padding: 0 .75rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+/* Botão + Novo - estilo global para funcionar em todas as páginas */
+.btn-new,
+.idiomas-actions .btn-new {
+  background: #2dce89;
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .08), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  transition: all .15s ease;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.btn-new:hover,
+.idiomas-actions .btn-new:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px -2px rgba(0, 0, 0, .15);
+  color: #fff;
+}
+
+.btn-new:active,
+.idiomas-actions .btn-new:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .12);
+  color: #fff;
+}
+
+.idiomas-actions .btn-search {
+  background: #5e72e4;
+  color: #fff;
+  border: none;
+}
+
+.idiomas-actions .btn-search {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, .08), 0 2px 4px -1px rgba(0, 0, 0, .06);
+  transition: all .15s ease;
+  font-weight: 600;
+  letter-spacing: .5px;
+}
+
+.idiomas-actions .btn-search:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 7px 14px -2px rgba(0, 0, 0, .15);
+}
+
+.idiomas-actions .btn-search:active {
+  transform: translateY(0);
+  box-shadow: 0 3px 6px -1px rgba(0, 0, 0, .12);
+}
+
+/* Table row actions (edit/delete) */
+.table-actions {
+  gap: .5rem;
+}
+
+
+/* Guardar button custom style */
+.btn-save {
+  background: linear-gradient(135deg,#2dce89,#38d996);
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  letter-spacing: .4px;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,.08),0 2px 4px -1px rgba(0,0,0,.06);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.btn-save:hover { transform: translateY(-2px); box-shadow: 0 7px 14px -2px rgba(0,0,0,.15); }
+.btn-save:active { transform: translateY(0); box-shadow: 0 3px 6px -1px rgba(0,0,0,.12); }
+.btn-save:focus { box-shadow: 0 0 0 3px rgba(45,206,137,.35); }

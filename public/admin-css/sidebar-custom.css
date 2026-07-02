@@ -1,0 +1,40 @@
+/* Sidebar Custom Styles */
+
+/* Permitir scroll suave quando necessário */
+.sidenav {
+    overflow-y: auto !important;
+}
+
+.sidenav .navbar-collapse {
+    overflow-y: visible !important;
+    max-height: none !important;
+}
+
+.sidenav .navbar-nav {
+    overflow-y: visible !important;
+    padding-bottom: 2rem;
+}
+
+/* Garantir que o sidebar ocupa toda a altura */
+.sidenav-main {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+/* Esconder scrollbar mas manter funcionalidade */
+.sidenav::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidenav::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.sidenav::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 3px;
+}
+
+.sidenav::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}

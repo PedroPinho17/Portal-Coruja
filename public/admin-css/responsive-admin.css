@@ -1,0 +1,33 @@
+
+/* DataTables length select - garantir que a seta não sobreponha o texto */
+.dataTables_wrapper .dataTables_length select {
+  padding-right: 2rem !important;
+  background-position: right 0.5rem center !important;
+}
+
+/* Desktop-only adjustments to force fixed sidebar, hide hamburger */
+@media (min-width: 992px) {
+  .btn-hamburger { display: none !important; }
+  #sidenav-main { transform:none !important; position:fixed; }
+  body.g-sidenav-show .main-content { margin-left:250px; }
+  .sidenav-backdrop { display:none !important; }
+}
+
+/* Mobile off-canvas sidebar behavior */
+@media (max-width: 991.98px) {
+  #sidenav-main { transform: translateX(-100%); position: fixed; top: 0; left: 0; height: 100vh; width: 260px; transition: transform .25s ease; box-shadow: 0 10px 20px rgba(0,0,0,.15); }
+  body.sidenav-open #sidenav-main { transform: translateX(0); }
+  body.g-sidenav-show .main-content { margin-left: 0; }
+  .sidenav-backdrop { position: fixed; inset: 0; background: rgba(0,0,0,.35); opacity: 0; visibility: hidden; transition: all .2s ease; z-index: 1040; }
+  .sidenav-backdrop.show { opacity:1; visibility:visible; }
+  .navbar .navbar-title { font-size: 1rem; }
+}
+
+/* Extra-compact navbar on very small screens */
+@media (max-width: 576px) {
+  .navbar.navbar-main { padding-top:.25rem !important; padding-bottom:.25rem !important; }
+  .navbar.navbar-main .container-fluid { padding-top:.25rem !important; padding-bottom:.25rem !important; }
+  .btn-hamburger { padding:.35rem .5rem; font-size:1.05rem; }
+  .navbar .navbar-title { font-size:.95rem; }
+  .navbar .btn.btn-sm { padding-top:.25rem; padding-bottom:.25rem; }
+}

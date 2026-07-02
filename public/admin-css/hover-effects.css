@@ -1,0 +1,13 @@
+/* Efeitos hover para cards da dashboard */
+.dashboard-card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1) !important;
+}
+
+/* Efeitos hover para botão WebAuthn */
+.webauthn-btn-hover:hover {
+    background: #4c63d2 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 16px rgba(94, 114, 228, 0.4) !important;
+}
+

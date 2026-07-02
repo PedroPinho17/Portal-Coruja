@@ -1,0 +1,10 @@
+/* A barra herda o layout base de .idiomas-actions; mantenha aqui apenas ajustes complementares */
+
+.live-search-actions .live-search-input {
+    flex: 1;
+}
+
+.live-search-input:focus {
+    outline: 2px solid #5e72e4;
+    outline-offset: 1px;
+}

@@ -1,0 +1,103 @@
+/* Linha divisória preta e leve na home */
+.home-divider {
+  border-color: #000 !important;
+  height: 1px;
+  background: none !important;
+  opacity: 1;
+  width: 80%;
+  margin: 24px auto;
+}
+
+/* Linha divisória preta na home */
+.home-divider {
+  border-color: #000 !important;
+  background-color: #000 !important;
+  color: #000 !important;
+  height: 2px;
+  opacity: 1;
+}
+/* Linha horizontal preta na home */
+.home-hr-black {
+  border-color: #000 !important;
+  background-color: #000 !important;
+  color: #000 !important;
+  height: 1px;
+  opacity: 1;
+}
+/* Nome da empresa (h4) mais leve */
+.col-xs-12.text-center h4 {
+  font-weight: 400;
+  padding-bottom: 15px;
+}
+
+/* Título acima das bandeiras (idiomas) mais leve */
+/* Título acima das bandeiras (idiomas) mais carregado */
+.col-xs-12.text-center h3,
+.col-xs-12.text-center h3 b {
+  font-weight: 600;
+}
+
+
+/* Styles specific to the Home page */
+
+/* Top logo */
+.home-logo {
+  width: 200px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}
+
+/* First category description text */
+.home-first-category-desc {
+  margin-top: 8px;
+  font-weight: 600;
+}
+
+/* Category block wrapper */
+.home-category-container {
+  margin-bottom: 28px;
+}
+
+/* Category title shown when id_categoria == 8 */
+.home-category-title {
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+/* Orb image styling */
+.home-orb {
+  max-width: 200px;
+  width: 60%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+/* Idioma icons: exact 32x32 without cropping (no rounded corners, no shadow) */
+
+/* Idioma icons: 48x48, espaçamento reduzido, efeito cartão */
+.idioma-link {
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin: 0 4px 0 0;
+  vertical-align: middle;
+  overflow: visible;
+  background: transparent;
+}
+
+.idioma-link:last-child {
+  margin-right: 0;
+}
+
+.idioma-link img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  background: transparent;
+  border-radius: 0;
+}
+
+
+/* Smaller icons on very small screens */

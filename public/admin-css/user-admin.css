@@ -1,0 +1,182 @@
+/* Sidebar sempre abaixo do modal Bootstrap */
+.g-sidenav-show .sidenav, .g-sidenav {
+  z-index: 1030 !important;
+}
+/* Remove qualquer ícone de seta padrão do Bootstrap no dropdown do user menu */
+.user-dropdown-trigger::after,
+.user-dropdown-trigger::before {
+  display: none !important;
+  content: none !important;
+}
+/* User dropdown avatar e nome juntos, centralizado */
+.user-dropdown-trigger {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  padding: 0 !important;
+  min-height: 32px;
+}
+.user-avatar {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+  background: #fff;
+  display: block;
+}
+.user-name {
+  color: #222;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none !important;
+  margin-left: 0.25rem;
+}
+
+/* Dropdown menu moderno com seta */
+.user-dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+  min-width: 180px;
+  margin-top: 0.2rem !important;
+  padding: 0.5rem 0 0.3rem 0;
+  right: 0 !important;
+  left: auto !important;
+  position: absolute !important;
+  overflow-x: visible;
+}
+.user-dropdown-menu .dropdown-arrow {
+  position: absolute;
+  top: -10px;
+  right: 15px;
+  left: auto;
+  transform: none;
+  width: 18px;
+  height: 10px;
+  overflow: hidden;
+  z-index: 10;
+}
+/* .user-dropdown-trigger:focus {
+  outline: none !important;
+  box-shadow: none !important;
+  border: none !important;
+} */
+.user-dropdown-menu .dropdown-arrow::after {
+  content: '';
+  display: block;
+  width: 18px;
+  height: 18px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 2px;
+  left: 0;
+}
+.user-dropdown-menu ul {
+  margin: 0;
+  padding: 0;
+}
+.user-dropdown-menu .dropdown-item {
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-radius: 6px;
+  transition: background 0.15s;
+}
+.user-dropdown-menu .dropdown-item:hover {
+  background: #f5f5f5;
+}
+.user-dropdown-menu .dropdown-divider {
+  margin: 0.25rem 0;
+}
+/* Alinhamento do dropdown de utilizador na navbar */
+.navbar .user-dropdown-wrapper {
+  display: flex;
+  align-items: center;
+  margin-top: 0.25rem; /* Ajuste para alinhar com o título */
+}
+
+/* Avatar menor e alinhado */
+.navbar .user-dropdown-wrapper img {
+  width: 32px !important;
+  height: 32px !important;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e5e5e5;
+  background: #fff;
+}
+
+/* Dropdown estilizado */
+.navbar .dropdown-menu {
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  min-width: 180px;
+  margin-top: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.navbar .dropdown-item {
+  font-size: 1rem;
+  padding: 0.5rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.navbar .dropdown-item i {
+  font-size: 1.2rem;
+}
+/* Custom admin button and form styles for user management */
+
+.btn-main {
+  background: #1976d2;
+  color: #fff;
+  border: none;
+  font-weight: bold;
+  box-shadow: 0 2px 8px 0 rgba(25, 118, 210, 0.10);
+  border-radius: 2rem;
+  transition: background 0.2s;
+}
+.btn-main:hover, .btn-main:focus {
+  background: #1251a3;
+  color: #fff;
+}
+
+.btn-cancel {
+  background: #f5f5f5;
+  color: #333;
+  border-radius: 2rem;
+  font-weight: 500;
+  border: none;
+}
+.btn-cancel:hover, .btn-cancel:focus {
+  background: #e0e0e0;
+  color: #222;
+}
+
+.form-control:focus {
+  border-color: #1976d2;
+  box-shadow: 0 0 0 0.2rem rgba(25, 118, 210, 0.15);
+  outline: none;
+}
+
+.btn-dashboard-main {
+  background: #1976d2;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 2rem;
+  box-shadow: 0 2px 8px 0 rgba(25, 118, 210, 0.10);
+  padding: 0.5rem 2rem;
+  transition: background 0.2s;
+}
+.btn-dashboard-main:hover, .btn-dashboard-main:focus {
+  background: #1251a3;
+  color: #fff;
+}

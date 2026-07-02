@@ -1,0 +1,258 @@
+/* ====== ESTILO MINIMALISTA E CLEAN ====== */
+
+/* Toast SweetAlert2 - refinado */
+.swal2-popup.swal2-toast.swal2-toast-large {
+    font-size: 1.1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: none;
+    border-radius: 6px;
+    background: white;
+    padding: 14px 20px;
+    font-weight: 500;
+}
+
+/* Botões - transições suaves */
+.btn {
+    transition: all 0.25s ease;
+    border-radius: 4px;
+    /* Garantir que não haja movimento vertical */
+    position: relative;
+    vertical-align: top;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Botões ativos - manter mesma posição e dimensões (sem movimento vertical) */
+.btn.active {
+    transform: none !important;
+    /* Garantir que border seja exatamente igual */
+    border-width: 1px !important;
+    border-style: solid !important;
+    /* Manter mesmo padding - usar valores explícitos */
+    padding: 0.375rem 0.75rem !important;
+    /* Evitar qualquer movimento */
+    position: relative !important;
+    top: 0 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    /* Garantir que box-shadow não mude as dimensões */
+    box-shadow: none !important;
+    /* Garantir que outline não mude as dimensões */
+    outline: none !important;
+}
+
+/* Específico para botões de subcategoria - garantir alinhamento consistente */
+.btn-group .subcategory-btn {
+    position: relative;
+    vertical-align: top;
+    /* Garantir que border seja consistente */
+    border-width: 1px !important;
+    border-style: solid !important;
+    /* Padding explícito para garantir consistência */
+    padding: 0.375rem 0.75rem !important;
+    /* Altura fixa consistente */
+    height: 38px !important;
+    line-height: 1.5 !important;
+    font-size: 1rem !important;
+    /* Texto em uma linha - aumentar largura em vez de altura */
+    white-space: nowrap;
+    text-align: center;
+    /* Largura automática baseada no conteúdo - sem restrições */
+    width: auto !important;
+    min-width: fit-content;
+    max-width: none !important;
+    /* Box-sizing para garantir que border não afete tamanho */
+    box-sizing: border-box !important;
+    /* Remover qualquer background-image que possa causar diferenças */
+    background-image: none !important;
+    /* Garantir que não haja box-shadow inicial */
+    box-shadow: none !important;
+    /* Sem outline */
+    outline: none !important;
+    /* Garantir que margin seja zero */
+    margin: 0 !important;
+}
+
+.btn-group .subcategory-btn.active {
+    transform: none !important;
+    position: relative !important;
+    top: 0 !important;
+    left: 0 !important;
+    margin: 0 !important;
+    /* Manter exatamente o mesmo padding e border */
+    padding: 0.375rem 0.75rem !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    /* Altura fixa consistente */
+    height: 38px !important;
+    line-height: 1.5 !important;
+    font-size: 1rem !important;
+    /* Texto em uma linha - aumentar largura em vez de altura */
+    white-space: nowrap;
+    text-align: center;
+    /* Largura mínima para acomodar texto */
+    min-width: fit-content;
+    /* Cor cinza escuro para estado ativo (seguindo guidelines) */
+    background-color: #6c757d !important;
+    color: #ffffff !important;
+    border-color: #6c757d !important;
+    /* Sem box-shadow que possa afetar dimensões */
+    box-shadow: none !important;
+    /* Sem outline */
+    outline: none !important;
+    /* Box-sizing para garantir que border não afete tamanho */
+    box-sizing: border-box !important;
+    /* Remover qualquer background-image */
+    background-image: none !important;
+    /* Garantir que z-index não cause problemas visuais */
+    z-index: 1 !important;
+}
+
+/* Card - sem bordas/retângulos visíveis, integrado */
+.card {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    transition: all 0.25s ease;
+}
+
+.card:hover {
+    box-shadow: none;
+}
+
+.card-body {
+    padding: 0;
+}
+
+/* Headers (h4) - espaçamento melhorado */
+h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+/* Back button - mais espaçamento */
+.img-back {
+    margin-right: 30px !important;
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 48px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+    position: relative !important;
+    z-index: 1 !important;
+}
+
+/* Garantir que o link também esteja visível */
+.back-link {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.back-link img.img-back {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: 48px !important;
+    min-width: 32px !important;
+    min-height: 32px !important;
+}
+
+/* Sub-grupos - spacing clean */
+.sub-group {
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.sub-group:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+}
+
+.apr-item {
+    margin-bottom: 10px;
+}
+
+.sub-group .apr-item:last-child {
+    margin-bottom: 6px;
+}
+
+/* ====== MODAL DO VISUALIZADOR (clean e simples) ====== */
+.modal_viewer .tingle-modal-box {
+    width: 98vw !important;
+    height: 85vh !important;
+    max-width: 1800px !important;
+    max-height: 85vh !important;
+    margin: auto !important;
+    top: 3vh !important;
+    border-radius: 8px !important;
+    overflow: hidden !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    padding: 0 !important;
+    display: flex !important;
+    align-items: stretch !important;
+}
+
+.modal_viewer .tingle-modal-box__content,
+.modal_viewer .tingle-modal-content {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    display: flex !important;
+}
+
+.modal_viewer iframe.pdfjs-viewer-iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: none !important;
+    display: block !important;
+}
+
+/* Background modal - clean */
+.tingle-modal.modal_viewer {
+    background: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* ====== SUBCATEGORIAS - ESTILOS BASE ====== */
+/* Layout flexível que se adapta automaticamente ao espaço disponível */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+/* Botões se adaptam automaticamente - se couber 3, coloca 3; se couber 2, coloca 2 */
+.btn-group .subcategory-btn {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: fit-content;
+    max-width: none;
+    white-space: nowrap;
+    text-align: center;
+    border-radius: 0.25rem !important;
+    margin: 0 !important;
+}
+
+/* Remover estilos do Bootstrap btn-group que removem bordas */
+.btn-group .subcategory-btn:not(:first-child) {
+    margin-left: 0 !important;
+    border-left: 1px solid !important;
+}
+
+.btn-group .subcategory-btn:not(:last-child) {
+    margin-right: 0 !important;
+    border-right: 1px solid !important;
+}

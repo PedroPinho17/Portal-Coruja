@@ -1,0 +1,58 @@
+/* Customização das abas de idioma (nav-tabs) */
+.nav-tabs .nav-link {
+  color: #198754 !important; /* verde bootstrap, nunca roxo */
+  font-weight: 600;
+  background: #fff;
+  border: 1px solid #dee2e6;
+  border-bottom: none;
+  transition: color 0.2s;
+}
+.nav-tabs .nav-link:hover {
+  color: #0d6efd !important; /* azul ao passar o mouse */
+}
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:active {
+  color: #fff !important;
+  background-color: #0d6efd !important;
+  border-color: #0d6efd #0d6efd #fff !important;
+}
+/* Customização dos botões outline-primary do formulário de apresentações */
+.btn-outline-primary {
+  border-color: #0d6efd !important;
+  color: #0d6efd !important;
+  background-color: #fff !important;
+  font-weight: 600;
+  box-shadow: none;
+}
+.btn-outline-primary:hover, .btn-outline-primary.active, .btn-outline-primary:active {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+  box-shadow: none !important;
+}
+.btn-check:checked + .btn-outline-primary {
+  background-color: #0d6efd !important;
+  color: #fff !important;
+  border-color: #0d6efd !important;
+  box-shadow: none !important;
+}
+
+/* Estilo para o checkbox principal de selecionar todos os idiomas - usar cor teal em vez de roxo */
+.checkbox-selecionar-todos:checked {
+  background-color: #14b8a6 !important;
+  border-color: #14b8a6 !important;
+}
+
+.checkbox-selecionar-todos:indeterminate {
+  background-color: #14b8a6 !important;
+  border-color: #14b8a6 !important;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10h8'/%3e%3c/svg%3e") !important;
+}
+
+.checkbox-selecionar-todos:focus {
+  border-color: #0d9488 !important;
+  box-shadow: 0 0 0 .2rem rgba(20, 184, 166, .35) !important;
+}
+
+.checkbox-selecionar-todos:hover {
+  border-color: #0d9488 !important;
+}

@@ -1,0 +1,202 @@
+/* Responsive rules extracted into a single file for consistent cascade */
+
+/* ===== From main.css: language image spacing ===== */
+@media (max-width: 576px) {
+  .lang-img-gap {
+    margin-right: 4px;
+  }
+}
+
+/* ===== From main.css: modal viewer and general adjustments ===== */
+@media (max-width: 992px) {
+  .modal_viewer .tingle-modal-box {
+    width: 98% !important;
+    height: 85vh !important;
+    top: 3vh !important;
+    border-radius: 8px;
+  }
+  .modal_viewer .tingle-modal-box__content {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .scrollToTop {
+    right: 20px;
+    bottom: 20px;
+    width: 36px;
+    height: 36px;
+  }
+  .mb-3 {
+    margin-bottom: 1rem;
+  }
+  h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .scrollToTop {
+    right: 15px;
+    bottom: 15px;
+    width: 32px;
+    height: 32px;
+  }
+  #Imagem_VoltarAtras_1 {
+    max-height: 32px;
+  }
+}
+
+/* ===== From main.css: Home page responsiveness ===== */
+@media (max-width: 768px) {
+  /* Home: current class names */
+  .home-logo { width: 160px; }
+  .home-first-category-desc { font-size: 1rem; margin: 15px 0 20px 0; }
+  .home-category-container { margin-bottom: 30px; }
+  .home-category-title { font-size: 1.1rem; }
+  .home-orb { max-width: 160px; width: 70%; margin: 12px auto; }
+  .home-header {
+    padding: 20px 10px;
+    gap: 12px;
+  }
+  .company-logo {
+    width: 160px;
+  }
+  .company-name {
+    font-size: 1.3rem;
+  }
+  .page-title {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+  }
+  .language-selector {
+    gap: 12px;
+    padding: 12px 0;
+  }
+  .language-btn img {
+    width: 42px;
+  }
+  .first-category-desc {
+    font-size: 1rem;
+    margin: 15px 0 20px 0;
+  }
+  .category-item {
+    margin-bottom: 30px;
+  }
+  .category-image {
+    max-width: 160px;
+    width: 70%;
+    margin: 12px auto;
+  }
+}
+
+@media (max-width: 576px) {
+  /* Home: current class names */
+  .home-logo { width: 140px; }
+  .home-first-category-desc { font-size: 0.95rem; margin: 12px 0 15px 0; }
+  .home-category-container { margin-bottom: 25px; }
+  .home-category-title { font-size: 1rem; }
+  .home-orb { max-width: 140px; width: 75%; margin: 10px auto; border-radius: 4px; }
+  .home-header {
+    padding: 15px 8px;
+    gap: 10px;
+  }
+  .company-logo {
+    width: 140px;
+  }
+  .company-name {
+    font-size: 1.1rem;
+  }
+  .page-title {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+  }
+  .language-selector {
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .language-btn img {
+    width: 38px;
+  }
+  .first-category-desc {
+    font-size: 0.95rem;
+    margin: 12px 0 15px 0;
+  }
+  .category-item {
+    margin-bottom: 25px;
+  }
+  .category-title {
+    font-size: 1rem;
+  }
+  .category-image {
+    max-width: 140px;
+    width: 75%;
+    margin: 10px auto;
+    border-radius: 4px;
+  }
+  .home-divider {
+    margin: 20px 0;
+  }
+}
+
+/* Ultra-small screens: shrink idioma icons (applies globally) */
+@media (max-width: 420px) {
+  .idioma-link { width:28px; height:28px; margin:0 3px 6px; }
+}
+
+/* ===== From detalhe.css: responsive rules ===== */
+@media (max-width: 768px) {
+  /* Detalhe: ensure images scale */
+  .img-categoria { max-width: 100%; height: auto; }
+  .img-back { max-width: 48px; height: auto; margin-right: 16px !important; }
+  .btn-group {
+    gap: 0.5rem;
+  }
+  .btn {
+    padding: 8px 14px;
+    font-size: 0.9rem;
+  }
+  h4 {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  .sub-group {
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Detalhe: tighter spacing on very small screens */
+  .img-back { max-width: 40px; margin-right: 12px !important; }
+  .btn-group {
+    gap: 0.5rem;
+  }
+  .btn {
+    padding: 10px 12px;
+    font-size: 0.85rem;
+  }
+  .card-body {
+    padding: 15px;
+  }
+  
+  /* Subcategorias: em telas muito pequenas, permite 2 por linha mas ainda pode expandir */
+  .btn-group .subcategory-btn {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: fit-content;
+    max-width: none;
+  }
+}
+
+/* ====== From main.css: Responsive - Subcategorias ====== */
+/* No mobile, garantir que os botões se adaptem mas possam expandir */
+@media (max-width: 768px) {
+  .btn-group .subcategory-btn {
+    flex: 0 0 auto;
+    width: auto;
+    min-width: fit-content;
+    max-width: none;
+  }
+}

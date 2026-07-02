@@ -1,0 +1,726 @@
+/* --- Simple Datatables: Soft UI look & feel --- */
+table.datatable {
+	font-size: 0.85rem;
+}
+
+table.datatable thead th {
+	background: #f8f9fa;
+	border-bottom: 1px solid #e9ecef;
+	color: #67748e;
+	font-weight: 700;
+	letter-spacing: .4px;
+}
+
+table.datatable tbody td {
+	vertical-align: middle;
+	color: #344767;
+}
+
+table.datatable tbody tr:hover td {
+	background-color: #f5f9ff;
+}
+
+/* Desktop defaults: natural widths (no ellipsis), readable actions */
+table.datatable {
+	table-layout: auto;
+}
+
+table.datatable th,
+table.datatable td {
+	white-space: normal;
+	overflow: visible;
+	text-overflow: clip;
+}
+
+/* Actions column: keep visible on desktop */
+table.datatable th:last-child,
+table.datatable td:last-child {
+	white-space: nowrap;
+	min-width: 200px;
+	text-align: center;
+	overflow: visible;
+}
+
+/* Garantir que os botões na coluna de ações não sejam cortados */
+table.datatable td:last-child .d-flex {
+	flex-wrap: nowrap;
+	justify-content: center;
+	gap: 0.75rem;
+	overflow: visible;
+}
+
+/* Sticky header inside responsive container */
+.table-responsive table.datatable thead th {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+}
+
+/* Sort indicators */
+.dataTable-wrapper th.asc .dataTable-sorter::after,
+.dataTable-wrapper .dataTable-sorter.asc::after {
+	content: "\25B4";
+	opacity: .9;
+}
+
+.dataTable-wrapper th.desc .dataTable-sorter::after,
+.dataTable-wrapper .dataTable-sorter.desc::after {
+	content: "\25BE";
+	opacity: .9;
+}
+
+.dataTable-wrapper .dataTable-sorter::after {
+	margin-left: .35rem;
+	font-size: .55rem;
+	opacity: .3;
+}
+
+/* Top and bottom bars */
+.dataTable-top,
+.dataTable-bottom {
+	display: flex;
+	align-items: center;
+	gap: .75rem;
+	flex-wrap: wrap;
+}
+
+.dataTable-top {
+	justify-content: space-between;
+	padding: .5rem .75rem .25rem;
+}
+
+.dataTable-bottom {
+	justify-content: space-between;
+	padding: .25rem .75rem .75rem;
+}
+
+/* DataTables info text – minimal, clean (no chip) */
+.dataTable-info {
+	font-family: 'Open Sans', system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, 'Helvetica Neue', Arial, 'Noto Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', sans-serif;
+	font-size: .85rem; /* bigger */
+	font-weight: 500; /* stronger */
+	color: #2d3748; /* darker */
+	background: transparent;
+	padding: .35rem 0; /* reduced vertical space, no border lines */
+	line-height: 1.3;
+	flex: 1 1 auto; /* allow centering area */
+}
+.dataTable-bottom { align-items: center; }
+
+.dataTable-dropdown label {
+	font-size: .8rem;
+	color: #67748e;
+	margin: 0;
+}
+
+.dataTable-selector {
+	font-size: .8rem;
+	padding: .25rem .5rem;
+	border: 1px solid #d1d9e6;
+	border-radius: .25rem;
+	background: #fff;
+}
+
+.dataTable-input {
+	font-size: .8rem;
+	padding: .35rem .5rem;
+	border: 1px solid #d1d9e6;
+	border-radius: .25rem;
+	min-width: 220px;
+}
+
+/* Pagination */
+.dataTable-pagination-list {
+	list-style: none;
+	display: flex;
+	gap: .25rem;
+	padding: 0;
+	margin: 0;
+}
+
+.dataTable-pagination-list li a {
+	display: block;
+	padding: .35rem .6rem;
+	border-radius: .25rem;
+	font-size: .75rem;
+	background: #f1f5f9;
+	color: #5e72e4;
+	text-decoration: none;
+}
+
+.dataTable-pagination-list li.active a {
+	background: #0d6efd;
+	color: #fff;
+	border-color: #0d6efd;
+}
+
+.dataTable-pagination-list li a:hover {
+	background: #0b5ed7;
+	color: #fff;
+	border-color: #0b5ed7;
+}
+
+/* Paginação Bootstrap - alinhada com o tema */
+.page-item.active .page-link {
+	background-color: #0d6efd !important;
+	border-color: #0d6efd !important;
+	color: #fff !important;
+	z-index: 3;
+}
+
+.page-item .page-link {
+	color: #0d6efd;
+}
+
+.page-item .page-link:hover {
+	color: #0b5ed7;
+	background-color: #e7f1ff;
+	border-color: #0d6efd;
+}
+
+/* Botões disabled da paginação - remover borda roxa */
+.page-item.disabled .page-link,
+.page-item.disabled .page-link:hover,
+.page-item.disabled .page-link:focus {
+	color: #6c757d !important;
+	background-color: #fff !important;
+	border-color: #dee2e6 !important;
+	cursor: not-allowed;
+	opacity: 0.65;
+}
+
+/* DataTables pagination disabled */
+.dataTable-pagination .disabled a,
+.dataTable-pagination .disabled a:hover,
+.dataTable-pagination .disabled a:focus,
+.dt-paging-button.disabled,
+.dt-paging-button.disabled:hover,
+.dt-paging-button.disabled:focus {
+	color: #6c757d !important;
+	background-color: #fff !important;
+	border-color: #dee2e6 !important;
+	cursor: not-allowed !important;
+	opacity: 0.65 !important;
+}
+
+/* DataTables layout - alinhamento correto */
+.d-md-flex.justify-content-between.align-items-center.dt-layout-end.col-md-auto.ms-auto {
+	display: flex !important;
+	justify-content: flex-end !important;
+	align-items: center !important;
+	gap: 0.5rem;
+	margin-left: auto !important;
+}
+
+/* Form select focus - alinhado com o tema azul */
+.form-select:focus {
+	border-color: #0d6efd !important;
+	box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+	outline: 0;
+}
+
+/* Page link focus e hover - alinhado com o tema azul */
+.page-link:focus,
+.page-link:hover {
+	color: #0d6efd !important;
+	background-color: #e7f1ff !important;
+	border-color: #0d6efd !important;
+}
+
+.page-link:focus {
+	z-index: 3;
+	outline: 0;
+	box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25) !important;
+}
+
+/* Responsive tweaks */
+@media (max-width: 992px) {
+	table.datatable {
+		font-size: 0.8rem;
+	}
+}
+
+@media (max-width: 768px) {
+	.dataTable-top {
+		flex-direction: column;
+		align-items: stretch;
+		gap: .5rem;
+	}
+
+	.dataTable-bottom {
+		flex-direction: column;
+		align-items: stretch;
+		gap: .5rem;
+	}
+
+	.dataTable-input {
+		width: 100%;
+		min-width: 0;
+	}
+
+	.dataTable-dropdown {
+		width: 100%;
+	}
+
+	.dataTable-pagination-list {
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	table.datatable th,
+	table.datatable td {
+		padding: .5rem .5rem;
+	}
+
+	/* On mobile: constrain cells and enable ellipsis */
+	table.datatable {
+		table-layout: fixed;
+	}
+
+	table.datatable th,
+	table.datatable td {
+		white-space: nowrap;
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	table.datatable th:last-child,
+	table.datatable td:last-child {
+		min-width: 80px;
+	}
+}
+
+/* Responsive stacked rows for narrow screens */
+@media (max-width: 576px) {
+	table.datatable.datatable-responsive thead {
+		display: none;
+	}
+
+	table.datatable.datatable-responsive tbody tr {
+		display: block;
+		background: #fff;
+		margin-bottom: .75rem;
+		border: 1px solid #e2e8f0;
+		border-radius: .5rem;
+		padding: .5rem .75rem;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+	}
+
+	table.datatable.datatable-responsive tbody tr td {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: .35rem 0 !important;
+		font-size: .75rem;
+		white-space: normal;
+		overflow: visible;
+		text-overflow: clip;
+	}
+
+	/* Mobile stacked labels: refined typography */
+	table.datatable.datatable-responsive tbody tr td::before {
+		content: attr(data-label);
+		font-weight: 600;
+		color: #6c7a91;
+		margin-right: .75rem;
+		flex: 0 0 40%;
+		text-transform: uppercase;
+		letter-spacing: .4px;
+		font-size: .68rem;
+		line-height: 1.15;
+	}
+
+	table.datatable.datatable-responsive tbody tr td:last-child {
+		justify-content: flex-start;
+		gap: .75rem;
+	}
+}
+
+/* Tablet (>=576px and <768px): hide low-priority columns (ID, Imagem) to reduce clutter */
+@media (min-width: 576px) and (max-width: 767.98px) {
+
+	table.datatable.datatable-responsive th.col-id,
+	table.datatable.datatable-responsive td.col-id,
+	table.datatable.datatable-responsive th.col-img,
+	table.datatable.datatable-responsive td.col-img {
+		display: none !important;
+	}
+}
+
+/* Improve stacked alignment: reserve consistent label width and spacing */
+@media (max-width: 576px) {
+	table.datatable.datatable-responsive tbody tr td {
+		gap: .5rem;
+	}
+
+	table.datatable.datatable-responsive tbody tr td::before {
+		flex: 0 0 110px;
+		/* consistent label column */
+		max-width: 45%;
+		white-space: nowrap;
+	}
+
+	/* Allow long translation text to wrap naturally */
+	table.datatable.datatable-responsive tbody tr td[colspan] {
+		display: block;
+	}
+}
+
+@media (max-width: 576px) {
+	table.datatable {
+		font-size: 0.78rem;
+	}
+
+	.dataTable-selector {
+		width: 100%;
+	}
+}
+
+/* Custom tweaks for the admin dashboard */
+.table thead th {
+	font-size: 0.65rem;
+	letter-spacing: .5px;
+}
+
+.table tbody td {
+	font-size: 0.7rem;
+}
+
+.badge {
+	text-transform: uppercase;
+}
+
+.progress-wrapper {
+	min-width: 120px;
+}
+
+/* Sidebar adjustments */
+#sidenav-main .navbar-brand-img {
+	/* Mostrar a imagem toda, maior e sem cortes */
+	width: 85% !important;
+	/* ocupa a maior parte da largura da sidebar */
+	max-width: 240px;
+	/* limite superior opcional */
+	height: auto !important;
+	/* mantém proporção */
+	max-height: none !important;
+	/* evita cortes por altura */
+	object-fit: contain;
+	/* nunca corta a imagem */
+	display: block;
+	margin: 0 auto;
+	/* centrada */
+}
+
+#sidenav-main {
+	margin-top: 0.75rem;
+}
+
+/* prevent top cut by browser chrome */
+#sidenav-main .sidenav-header {
+	text-align: center;
+	overflow: visible;
+	padding-top: 1.75rem;
+	/* more air above logo */
+	padding-bottom: 2.25rem;
+	/* ensure full logo + tagline clear before menu */
+	min-height: 240px;
+	/* guarantee space so the first item starts after the full image */
+	background: #fff;
+	/* keep the area clean */
+	position: relative;
+	z-index: 2;
+	/* sit above nav backgrounds */
+}
+
+#sidenav-main .sidenav-header .navbar-brand {
+	width: 100%;
+	justify-content: center;
+}
+
+#sidenav-main .sidenav-header+.horizontal {
+	margin-top: 0 !important;
+	margin-bottom: 1rem !important;
+	/* separation between logo and menu */
+	position: relative;
+	z-index: 2;
+}
+
+/* Ensure sidebar has consistent width and stays above main content */
+#sidenav-main {
+	width: 250px;
+	z-index: 1050;
+}
+
+/* Push main content to the right of the sidebar so it doesn't overlap the logo */
+body.g-sidenav-show .main-content {
+	margin-left: 250px;
+	position: relative;
+	z-index: 100;
+	/* below sidebar */
+}
+
+/* If there is any top overlap, provide a safe top padding for main content */
+body.g-sidenav-show .main-content>.container-fluid {
+	padding-top: 0.5rem;
+}
+
+#sidenav-main .navbar-brand {
+	font-size: 0.95rem;
+	font-weight: 600;
+}
+
+#sidenav-main .logo-tagline {
+	font-size: 0.55rem;
+	letter-spacing: .08rem;
+	text-transform: uppercase;
+}
+
+#sidenav-main .first-nav-item {
+	margin-top: 0.5rem;
+}
+
+/* Active nav item styling – softer, neutral background with subtle accent */
+#sidenav-main .nav-link.active {
+	background: #f1f5f9;
+	/* light slate/gray */
+	color: #344767 !important;
+	/* Soft UI default text */
+	border-left: 4px solid #0d6efd;
+	/* subtle primary accent */
+	box-shadow: none;
+	/* remove heavy glow */
+	border-radius: 0.5rem;
+}
+
+#sidenav-main .nav-link.active .icon i {
+	color: #0d6efd !important;
+	/* match the accent */
+}
+
+/* Do not tint the icon background when active */
+#sidenav-main .nav-link .icon,
+#sidenav-main .nav-link.active .icon {
+	background: transparent !important;
+	box-shadow: none !important;
+}
+
+/* Hover state */
+#sidenav-main .nav-link:not(.active):hover {
+	background: #f6f9fc;
+	border-radius: 0.5rem;
+}
+
+/* Transition for smooth color changes */
+#sidenav-main .nav-link {
+	transition: all .25s ease;
+}
+
+/* Checkbox style: use site teal instead of dark/black */
+/* Base accent color (Firefox & modern browsers) */
+.form-check-input {
+	accent-color: #14b8a6;
+}
+/* Increase specificity & force override (theme loads after this) */
+body .form-check-input:checked {
+	background-color: #14b8a6 !important;
+	border-color: #14b8a6 !important;
+}
+body .form-check-input:focus {
+	box-shadow: 0 0 0 .2rem rgba(20, 184, 166, .35) !important;
+	border-color: #0d9488 !important;
+}
+body .form-check-input:hover {
+	border-color: #0d9488 !important;
+}
+body .form-check-input:active {
+	background-color: #0d9488 !important;
+	border-color: #0d9488 !important;
+}
+
+/* DeepL buttons: unified color across admin */
+.btn[data-deepl-btn] {
+	background-color: #14b8a6 !important;
+	/* teal */
+	border-color: #14b8a6 !important;
+	color: #fff !important;
+}
+
+.btn[data-deepl-btn]:hover,
+.btn[data-deepl-btn]:focus {
+	background-color: #0d9488 !important;
+	/* darker teal on hover */
+	border-color: #0d9488 !important;
+}
+
+.btn[data-deepl-btn]:focus,
+.btn[data-deepl-btn].focus,
+.btn[data-deepl-btn].active {
+	box-shadow: 0 0 0 0.2rem rgba(20, 184, 166, 0.35) !important;
+}
+
+/* Subtle outline teal button to match site palette */
+.btn-outline-teal {
+	color: #0d9488;
+	border-color: #14b8a6;
+	background-color: transparent;
+	transition: color .15s ease, background-color .15s ease, border-color .15s ease, box-shadow .15s ease;
+}
+.btn-outline-teal:hover,
+.btn-outline-teal:focus {
+	color: #0d9488;
+	background-color: rgba(20, 184, 166, 0.08); /* leve, sem pesar */
+	border-color: #14b8a6;
+}
+.btn-outline-teal:active,
+.btn-outline-teal.active,
+.show>.btn-outline-teal.dropdown-toggle {
+	color: #0d9488 !important;
+	background-color: rgba(20, 184, 166, 0.16) !important; /* ligeiramente mais visível ao clicar */
+	border-color: #14b8a6 !important;
+}
+.btn-outline-teal:focus {
+	box-shadow: 0 0 0 0.2rem rgba(20, 184, 166, 0.15) !important; /* anel suave */
+}
+
+/* Polished mobile hamburger */
+.btn-hamburger {
+	background: #fff;
+	border: 1px solid #d1d9e6;
+	padding: .4rem .6rem;
+	line-height: 1;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: .5rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, .04);
+	transition: all .25s ease;
+	font-size: 1.15rem;
+	color: #344767;
+}
+
+.btn-hamburger:hover {
+	background: #f6f9fc;
+	border-color: #b5c2d6;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, .08);
+	transform: translateY(-2px);
+}
+
+.btn-hamburger:active {
+	transform: translateY(0);
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .06);
+}
+
+.btn-hamburger[aria-expanded="true"] {
+	background: #f1f5f9;
+	border-color: #b5c2d6;
+	box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .05);
+}
+
+/* Hide mobile hamburger on desktop */
+@media (min-width: 992px) {
+	.btn-hamburger { display: none !important; }
+	/* Ensure desktop layout pushes content right and no offcanvas transform persists */
+	#sidenav-main { transform:none !important; position:fixed; }
+	body.g-sidenav-show .main-content { margin-left:250px; }
+	.sidenav-backdrop { display:none !important; }
+}
+
+/* --- Mobile sidebar as offcanvas --- */
+@media (max-width: 991.98px) {
+
+	/* Start hidden off-canvas */
+	#sidenav-main {
+		transform: translateX(-100%);
+		position: fixed;
+		top: 0;
+		left: 0;
+		height: 100vh;
+		width: 260px;
+		transition: transform .25s ease;
+		box-shadow: 0 10px 20px rgba(0, 0, 0, .15);
+		z-index: 1051 !important;
+		pointer-events: auto;
+	}
+
+	body.sidenav-open #sidenav-main {
+		transform: translateX(0);
+		z-index: 1051 !important;
+		pointer-events: auto;
+	}
+
+	/* Main content should not have left margin on mobile */
+	body.g-sidenav-show .main-content {
+		margin-left: 0;
+	}
+
+	/* Backdrop - invisível mas funcional para fechar o menu */
+	.sidenav-backdrop {
+		position: fixed;
+		inset: 0;
+		background: transparent;
+		opacity: 0;
+		visibility: hidden;
+		transition: none;
+		z-index: 1040;
+		pointer-events: none;
+	}
+
+	.sidenav-backdrop.show {
+		opacity: 0;
+		visibility: visible;
+		pointer-events: auto;
+	}
+
+	/* Navbar title stays centered while actions sit left/right */
+	.navbar .navbar-title {
+		font-size: 1rem;
+	}
+}
+
+/* Extra-compact navbar on very small screens */
+@media (max-width: 576px) {
+	.navbar.navbar-main {
+		padding-top: .25rem !important;
+		padding-bottom: .25rem !important;
+	}
+
+	.navbar.navbar-main .container-fluid {
+		padding-top: .25rem !important;
+		padding-bottom: .25rem !important;
+	}
+
+	.btn-hamburger {
+		padding: .35rem .5rem;
+		font-size: 1.05rem;
+	}
+
+	.navbar .navbar-title {
+		font-size: .95rem;
+	}
+
+	.navbar .btn.btn-sm {
+		padding-top: .25rem;
+		padding-bottom: .25rem;
+	}
+}
+
+/* Desabilitar RowReorder visual quando não está ativo */
+/* Remover bordas azuis e seleção do RowReorder em tabelas sem data-row-reorder */
+table.datatable:not([data-row-reorder="true"]) tbody tr.selected,
+table.datatable:not([data-row-reorder="true"]) tbody tr.reorder-selected,
+table.datatable:not([data-row-reorder="true"]) tbody tr.dt-rowReorder-moving,
+table.datatable:not([data-row-reorder="true"]) tbody tr.dt-rowReorder-selected {
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	background-color: transparent !important;
+}
+
+/* Garantir que tabelas sem RowReorder não mostram bordas ao clicar */
+table.datatable:not([data-row-reorder="true"]) tbody tr:focus,
+table.datatable:not([data-row-reorder="true"]) tbody tr:active {
+	outline: none !important;
+	border: none !important;
+	box-shadow: none !important;
+}
