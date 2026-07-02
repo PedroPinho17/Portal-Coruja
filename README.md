@@ -1,59 +1,85 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Portal Corujinha
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Website dedicado à **Corujinha — Centro de Apoio Escolar**, onde simpatizantes e utilizadores podem navegar e aceder a informações sobre a organização, serviços, equipa, notícias e contactos.
 
-## About Laravel
+Repositório: [https://github.com/PedroPinho17/Portal-Coruja](https://github.com/PedroPinho17/Portal-Coruja)
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Sobre o projeto
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+O Portal Corujinha é uma aplicação web desenvolvida em **Laravel 12** com **PHP 8.2+**, pensada para apresentar o centro de apoio escolar ao público e permitir a gestão de conteúdos através de um backoffice administrativo.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Funcionalidades
 
-## Learning Laravel
+### Site público
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework. You can also check out [Laravel Learn](https://laravel.com/learn), where you will be guided through building a modern Laravel application.
+- **Página inicial** — apresentação, serviços, formações, equipa, notícias, protocolos escolares e contacto
+- **Sobre nós** — informação sobre a Corujinha
+- **Galeria** — fotografias dos centros e atividades
+- **Equipa** — membros da equipa
+- **Notícias** — publicações e novidades
+- **Formulário de contacto** — envio de mensagens por email
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Backoffice (`/admin`)
 
-## Laravel Sponsors
+- Dashboard administrativo
+- Gestão de **equipa**, **notícias**, **entidades**, **formações** e **protocolos escolares**
+- Gestão de **utilizadores** e perfil
+- Autenticação com sessão, rate limiting e alteração obrigatória de password no primeiro login
+- Suporte a **WebAuthn** (autenticação com chave de segurança)
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## Tecnologias
 
-### Premium Partners
+- Laravel 12
+- PHP 8.2+
+- Tailwind CSS 4 + Vite
+- SweetAlert2, Bootstrap Icons, Bootstrap FileInput
+- DeepL (integração para tradução)
+- SQLite (configuração padrão em `.env.example`; também suporta MySQL/MariaDB)
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## Instalação local
 
-## Contributing
+```powershell
+git clone https://github.com/PedroPinho17/Portal-Coruja.git
+cd Portal-Coruja
+composer install
+copy .env.example .env
+php artisan key:generate
+php artisan migrate
+npm install
+npm run build
+php artisan serve
+```
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Alternativa rápida (instala dependências, `.env`, chave, migrations e build):
 
-## Code of Conduct
+```powershell
+composer setup
+```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+## Notas importantes
 
-## Security Vulnerabilities
+### Autenticação no GitHub
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Na primeira vez que fizeres `push`, o GitHub pode pedir login. Podes usar um [Personal Access Token](https://github.com/settings/tokens) em vez da password.
 
-## License
+### Ficheiros que não vão para o GitHub
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Estes ficheiros/pastas já estão no `.gitignore` e **não são enviados** para o repositório:
+
+- `.env` — credenciais e configuração local (correto não enviar)
+- `vendor/` — dependências PHP (quem clonar corre `composer install`)
+- `node_modules/` — dependências JavaScript (quem clonar corre `npm install`)
+
+### Quem clonar o projeto precisará de
+
+```powershell
+composer install
+copy .env.example .env
+php artisan key:generate
+```
+
+Depois, configurar a base de dados no `.env` e executar `php artisan migrate`.
+
+## Licença
+
+Projeto open-source sob licença [MIT](https://opensource.org/licenses/MIT).
